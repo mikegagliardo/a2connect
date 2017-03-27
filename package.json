@@ -1,0 +1,38 @@
+{
+  "name": "a2connect",
+  "version": "1.0.0",
+  "description": "A CLI for connecting to dockerized A2 instances and performing various actions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "BABEL_ENV=test mocha --compilers js:babel-register  --require babel-polyfill --recursive ./test/**/*_spec.js",
+    "dev": "babel-node src/index.js",
+    "prestart": "babel src --out-dir dist",
+    "start": "node dist/index.js"
+  },
+  "author": "Michael Gagliardo",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "chalk": "^1.1.3",
+    "clear": "0.0.1",
+    "clui": "^0.3.1",
+    "figlet": "^1.2.0",
+    "github": "^9.2.0",
+    "inquirer": "^3.0.6",
+    "jenkins": "^0.20.0",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "preferences": "^0.2.1",
+    "simple-git": "^1.67.0",
+    "touch": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-plugin-rewire": "^1.0.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-register": "^6.24.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
